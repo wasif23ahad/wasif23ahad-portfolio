@@ -26,6 +26,7 @@
 Agents.md
 PRD.md
 Architecture.md
+implementation_plan.md
 
 # debug
 npm-debug.log*
