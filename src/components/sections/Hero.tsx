@@ -1,15 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Download, Github, Linkedin, Twitter, Facebook, ArrowRight } from 'lucide-react';
+import { Download, Code, Link, Globe, MessageCircle, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com/wasif23ahad' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/wasif23ahad' },
-  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/wasif23ahad' },
-  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/wasif23ahad' },
+  { name: 'GitHub', icon: Code, href: 'https://github.com/wasif23ahad' },
+  { name: 'LinkedIn', icon: Link, href: 'https://linkedin.com/in/wasif23ahad' },
+  { name: 'Twitter', icon: Globe, href: 'https://twitter.com/wasif23ahad' },
+  { name: 'WhatsApp', icon: MessageCircle, href: 'https://wa.me/8801973116555' },
 ];
 
 export default function Hero() {
@@ -39,7 +39,7 @@ export default function Hero() {
           
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
             Hi, I&apos;m <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-ai-accent to-fs-accent">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-ai-accent to-fs-accent">
               Mohammad Wasif Ahad
             </span>
           </h1>
