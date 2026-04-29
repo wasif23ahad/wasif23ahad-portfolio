@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects, Project } from '@/data/projects';
-import { ExternalLink, Github, X, ArrowRight, CheckCircle2, Lightbulb } from 'lucide-react';
+import { Link, Code, X, ArrowRight, CheckCircle2, Lightbulb } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Projects() {
@@ -80,12 +80,12 @@ export default function Projects() {
                   <div className="flex gap-3">
                     {project.githubLink && (
                       <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-white transition-colors">
-                        <Github className="w-5 h-5" />
+                        <Code className="w-5 h-5" />
                       </a>
                     )}
                     {project.liveLink && (
                       <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-ai-accent transition-colors">
-                        <ExternalLink className="w-5 h-5" />
+                        <Link className="w-5 h-5" />
                       </a>
                     )}
                   </div>
@@ -99,7 +99,7 @@ export default function Projects() {
       {/* Project Detail Modal */}
       <AnimatePresence>
         {selectedProject && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12">
+          <div className="fixed inset-0 z-100 flex items-center justify-center p-4 md:p-12">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -202,7 +202,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="flex-1 py-4 bg-ai-accent text-slate-950 font-bold rounded-2xl text-center flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all"
                     >
-                      Live Preview <ExternalLink className="w-4 h-4" />
+                      Live Preview <Link className="w-4 h-4" />
                     </a>
                   )}
                   {selectedProject.githubLink && (
@@ -212,7 +212,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="flex-1 py-4 glass border border-white/10 text-white font-bold rounded-2xl text-center flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all"
                     >
-                      Source Code <Github className="w-4 h-4" />
+                      Source Code <Code className="w-4 h-4" />
                     </a>
                   )}
                 </div>

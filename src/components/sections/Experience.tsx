@@ -79,7 +79,7 @@ export default function Experience() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.2 }}
-                  className="glass p-6 rounded-2xl border border-white/5 bg-linear-to-br from-white/[0.02] to-transparent"
+                  className="glass p-6 rounded-2xl border border-white/5 bg-linear-to-br from-white/2 to-transparent"
                 >
                   <h3 className="text-lg font-bold text-white mb-1">{edu.degree}</h3>
                   <p className="text-ai-accent text-sm font-medium mb-3">{edu.institution}</p>
