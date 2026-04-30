@@ -123,14 +123,14 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="relative flex justify-center lg:justify-end lg:-translate-y-16"
         >
-          <div className="relative w-72 h-72 md:w-[480px] md:h-[480px] flex items-center justify-center">
+          <div className="relative w-64 h-64 md:w-[480px] md:h-[480px] flex items-center justify-center">
             {/* Ash-Themed Decorative Rings */}
             <div className="absolute inset-4 border-2 border-dashed border-text-secondary/20 rounded-full animate-[spin_30s_linear_infinite]" />
             <div className="absolute inset-12 border-2 border-text-secondary/30 rounded-full animate-[spin_25s_linear_infinite_reverse]" />
             <div className="absolute inset-24 border-[3px] border-text-secondary/40 rounded-full" />
             
             {/* Image Container */}
-            <div className="relative w-56 h-56 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-text-primary/5 shadow-2xl z-10 bg-surface">
+            <div className="relative w-48 h-48 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-text-primary/5 shadow-2xl z-10 bg-surface">
               <Image
                 src="/ProfilePicture/WasifDp.png"
                 alt="Mohammad Wasif Ahad"
@@ -148,25 +148,25 @@ export default function Hero() {
             <motion.div 
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-[10%] -right-16 glass px-4 py-2 rounded-lg border border-ai-accent/30 z-20"
+              className="absolute top-[5%] -right-4 md:top-[10%] md:-right-16 glass px-2 py-1 md:px-4 md:py-2 rounded-lg border border-ai-accent/30 z-20"
             >
-              <span className="text-ai-accent font-mono text-sm tracking-widest font-bold whitespace-nowrap">15 FINISHED PROJECTS</span>
+              <span className="text-ai-accent font-mono text-[10px] md:text-sm tracking-widest font-bold whitespace-nowrap">15 FINISHED PROJECTS</span>
             </motion.div>
             
             <motion.div 
               animate={{ y: [0, 15, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute bottom-[10%] -right-16 glass px-4 py-2 rounded-lg border border-fs-accent/30 z-20"
+              className="absolute bottom-[5%] -right-4 md:bottom-[10%] md:-right-16 glass px-2 py-1 md:px-4 md:py-2 rounded-lg border border-fs-accent/30 z-20"
             >
-              <span className="text-fs-accent font-mono text-sm tracking-widest font-bold whitespace-nowrap">PROBLEM SOLVER</span>
+              <span className="text-fs-accent font-mono text-[10px] md:text-sm tracking-widest font-bold whitespace-nowrap">PROBLEM SOLVER</span>
             </motion.div>
 
             <motion.div 
               animate={{ x: [0, 10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-1/2 -left-28 -translate-y-1/2 glass px-4 py-2 rounded-lg border border-amber-400/30 z-20 shadow-[0_0_15px_rgba(251,191,36,0.1)]"
+              className="absolute top-1/2 -left-12 md:-left-28 -translate-y-1/2 glass px-2 py-1 md:px-4 md:py-2 rounded-lg border border-amber-400/30 z-20 shadow-[0_0_15px_rgba(251,191,36,0.1)]"
             >
-              <span className="text-amber-400 font-mono text-sm tracking-widest font-bold whitespace-nowrap">2+ YEARS EXP</span>
+              <span className="text-amber-400 font-mono text-[10px] md:text-sm tracking-widest font-bold whitespace-nowrap">2+ YEARS EXP</span>
             </motion.div>
           </div>
         </motion.div>
