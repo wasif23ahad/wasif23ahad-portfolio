@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mohammad Wasif Ahad — Portfolio
 
-## Getting Started
+A modern, responsive, and visually stunning personal portfolio built with **Next.js 16**, **TypeScript**, and **Tailwind CSS 4**. Features dark/light theme support, smooth scroll animations, and a premium glassmorphism design system.
 
-First, run the development server:
+🔗 **Live:** [https://www.wasif23ahad.me/](https://www.wasif23ahad.me/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Key Features
+
+- **Dark / Light Theme** — Seamless toggle powered by `next-themes` with theme-aware icons and backgrounds.
+- **Smooth Scroll** — Buttery-smooth page scrolling via [Lenis](https://github.com/darkroomengineering/lenis).
+- **Animated UI** — Page transitions, hover effects, and floating badges using Framer Motion & GSAP.
+- **Glassmorphism Design** — Frosted-glass cards, gradient accents, and a premium aesthetic throughout.
+- **Responsive Navigation** — Pill-style navbar that adapts to mobile with priority-based item visibility.
+- **Project Showcase** — Interactive project cards with detail modals, live links, and GitHub references.
+- **Resume Download** — One-click PDF resume download directly from the hero section.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+| :--- | :--- |
+| **Framework** | [Next.js 16](https://nextjs.org/) (App Router) |
+| **Language** | [TypeScript 5](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS 4](https://tailwindcss.com/) |
+| **Animations** | [Framer Motion 12](https://www.framer.com/motion/), [GSAP 3](https://gsap.com/) |
+| **Smooth Scroll** | [Lenis](https://github.com/darkroomengineering/lenis) |
+| **Theming** | [next-themes](https://github.com/pacocoursey/next-themes) |
+| **Icons** | [Lucide React](https://lucide.dev/), [Simple Icons](https://simpleicons.org/) |
+| **Charts** | [Recharts](https://recharts.org/) |
+| **Utilities** | clsx, tailwind-merge |
+| **Deployment** | [Vercel](https://vercel.com/) |
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── app/              # Next.js App Router (layout, page, globals.css)
+├── components/
+│   ├── Navbar.tsx         # Responsive pill navigation
+│   ├── ThemeToggle.tsx    # Dark/light mode switch
+│   ├── ThemeProvider.tsx  # next-themes wrapper
+│   ├── SmoothScroll.tsx   # Lenis scroll integration
+│   └── sections/
+│       ├── Hero.tsx       # Landing section with profile & badges
+│       ├── About.tsx      # About me
+│       ├── Skills.tsx     # Technologies & skill cards
+│       ├── Experience.tsx # Work & education timeline
+│       ├── Projects.tsx   # Project grid with detail modals
+│       └── Contact.tsx    # Contact form
+├── data/
+│   ├── projects.ts    # Project entries (title, tech, links, etc.)
+│   └── experience.ts  # Work history & education data
+└── lib/
+    └── utils.ts       # cn() utility (clsx + tailwind-merge)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- **Node.js** ≥ 18
+- **npm** or **pnpm**
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Clone the repository
+git clone https://github.com/wasif23ahad/wasif23ahad-portfolio.git
+cd wasif23ahad-portfolio
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Install dependencies
+npm install
 
-## Deploy on Vercel
+# Start dev server
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Production Build
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 📄 License
+
+This project is for personal use. Feel free to use the structure as inspiration for your own portfolio.
+
+---
+
+**Built with ❤️ by [Mohammad Wasif Ahad](https://github.com/wasif23ahad)**
