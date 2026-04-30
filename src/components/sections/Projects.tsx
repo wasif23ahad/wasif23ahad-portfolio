@@ -63,7 +63,7 @@ export default function Projects() {
                     target.src = `https://placehold.co/600x400/${isDark ? '0f172a' : 'f1f5f9'}/${isDark ? '10b981' : '6366f1'}?text=${project.title}`;
                   }}
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-background to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-linear-to-t from-background to-transparent opacity-0 dark:opacity-60" />
                 <div className="absolute bottom-4 left-4 flex gap-2">
                   {project.techStack.slice(0, 3).map(tech => (
                     <span key={tech} className="px-2 py-1 rounded bg-black/50 backdrop-blur-md text-[10px] font-mono text-white">
@@ -151,7 +151,7 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent opacity-0 dark:opacity-100" />
                   
                   <button
                     onClick={() => setSelectedProject(null)}

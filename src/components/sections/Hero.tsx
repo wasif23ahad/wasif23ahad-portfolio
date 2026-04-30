@@ -31,17 +31,17 @@ const WhatsappIcon = () => (
 );
 
 const socialLinks = [
-  { name: 'GitHub', icon: GithubIcon, href: 'https://github.com/wasif23ahad' },
-  { name: 'LinkedIn', icon: LinkedinIcon, href: 'https://www.linkedin.com/in/wasifahad/' },
-  { name: 'Twitter', icon: XIcon, href: 'https://x.com/WasifAhad1' },
-  { name: 'WhatsApp', icon: WhatsappIcon, href: 'https://wa.me/8801973116555' },
+  { name: 'GitHub', icon: GithubIcon, href: 'https://github.com/wasif23ahad', ariaLabel: "GitHub profile" },
+  { name: 'LinkedIn', icon: LinkedinIcon, href: 'https://www.linkedin.com/in/wasifahad/', ariaLabel: "LinkedIn profile" },
+  { name: 'Twitter', icon: XIcon, href: 'https://x.com/WasifAhad1', ariaLabel: "X profile" },
+  { name: 'WhatsApp', icon: WhatsappIcon, href: 'https://wa.me/8801973116555', ariaLabel: "WhatsApp contact" },
 ];
 
 export default function Hero() {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-6"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-20 px-6"
     >
       {/* Background Orbs */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-ai-accent/10 rounded-full blur-[120px] animate-pulse" />
@@ -107,6 +107,7 @@ export default function Hero() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={social.ariaLabel}
                 className="transition-transform hover:scale-110"
               >
                 <social.icon />

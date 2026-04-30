@@ -19,7 +19,7 @@ export default function Experience() {
             <div className="space-y-12 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[2px] before:bg-text-secondary/20">
               {experiences.map((exp, index) => (
                 <motion.div
-                  key={exp.company}
+                  key={exp.company + '-' + exp.role}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}

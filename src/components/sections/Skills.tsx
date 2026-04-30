@@ -153,7 +153,11 @@ export default function Skills() {
                     ? `https://skillicons.dev/icons?i=aws` 
                     : `https://cdn.simpleicons.org/${tech.slug}/${tech.color}`} 
                   alt={tech.name}
-                  className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300"
+                  className={cn(
+                    "w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300",
+                    tech.color === 'FFFFFF' && "dark:invert-0 invert",
+                    (tech.slug === 'django' || tech.slug === 'prisma') && "dark:invert invert-0"
+                  )}
                 />
               </div>
               <span className="text-[10px] font-bold tracking-widest text-text-secondary group-hover:text-text-primary transition-colors text-center truncate w-full">
@@ -214,7 +218,11 @@ export default function Skills() {
                             ? `https://skillicons.dev/icons?i=aws` 
                             : `https://cdn.simpleicons.org/${skill.slug}/${skill.color}`} 
                           alt={skill.name}
-                          className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                          className={cn(
+                            "w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity",
+                            skill.color === 'FFFFFF' && "dark:invert-0 invert",
+                            (skill.slug === 'django' || skill.slug === 'prisma') && "dark:invert invert-0"
+                          )}
                         />
                       )}
                     </div>

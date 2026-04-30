@@ -92,7 +92,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="absolute top-6 left-0 right-0 z-50 px-8 pointer-events-none">
+    <nav className="absolute top-6 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none">
       <div className="max-w-fit mx-auto flex items-center gap-6 md:gap-12 pointer-events-auto">
         {/* Logo - Aligned with Navbar */}
         <motion.div
@@ -115,7 +115,7 @@ export default function Navbar() {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           className={cn(
-            "flex items-center gap-1 p-1.5 rounded-full border border-text-primary/10 backdrop-blur-2xl bg-surface/60 shadow-2xl"
+            "flex items-center gap-0.5 md:gap-1.5 p-1.5 rounded-full border border-text-primary/10 backdrop-blur-2xl bg-surface/60 shadow-2xl"
           )}
         >
           {navLinks.map((link) => {
@@ -124,8 +124,9 @@ export default function Navbar() {
               <button
                 key={link.name}
                 onClick={() => scrollTo(link.href)}
+                aria-label={`Navigate to ${link.name}`}
                 className={cn(
-                  "relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all duration-300",
+                  "relative flex items-center gap-2 px-3 md:px-4 py-3 md:py-2 rounded-full text-sm font-bold transition-all duration-300",
                   isActive 
                     ? "text-white" 
                     : "text-text-secondary hover:text-white"
@@ -153,7 +154,10 @@ export default function Navbar() {
           })}
           
           {/* More Dropdown */}
-          <button className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold text-text-secondary hover:text-white transition-all group">
+          <button 
+            aria-label="View more sections"
+            className="flex items-center gap-2 px-3 md:px-4 py-3 md:py-2 rounded-full text-sm font-bold text-text-secondary hover:text-white transition-all group"
+          >
             <div className="p-1.5 rounded-full bg-transparent group-hover:bg-purple-500/10">
               <LayoutGrid className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
             </div>
