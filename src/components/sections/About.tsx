@@ -29,7 +29,7 @@ export default function About() {
                   <Cpu className="text-ai-accent w-8 h-8" />
                 </div>
                 <div className="relative w-32 h-32 rounded-full border-2 border-ai-accent/30 p-1 group">
-                  <div className="w-full h-full rounded-full bg-slate-900 border border-white/10 flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full rounded-full bg-surface border border-text-primary/10 flex items-center justify-center overflow-hidden">
                     <img 
                       src="/ProfilePicture/DP.jpeg" 
                       alt="Wasif Ahad Casual" 
@@ -42,7 +42,7 @@ export default function About() {
               </div>
               
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-white flex items-center gap-2">
+                <h3 className="text-2xl font-bold text-text-primary flex items-center gap-2">
                   <Music className="text-fs-accent w-6 h-6" />
                   Beyond the Code
                 </h3>
@@ -52,7 +52,7 @@ export default function About() {
                 
                 <div className="grid grid-cols-2 gap-4">
                   {stats.map((stat) => (
-                    <div key={stat.label} className="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <div key={stat.label} className="p-4 rounded-xl glass border border-text-primary/5">
                       <div className="text-2xl font-bold text-ai-accent">{stat.value}</div>
                       <div className="text-xs text-text-secondary uppercase tracking-wider">{stat.label}</div>
                     </div>
@@ -77,15 +77,15 @@ export default function About() {
             
             <div className="space-y-6 text-lg text-text-secondary leading-relaxed">
               <p>
-                My journey began in the world of electrons and circuits during my <span className="text-white font-semibold">BSc in Electrical and Electronic Engineering (AUST)</span>. However, the logic of software soon pulled me deeper.
+                My journey began in the world of electrons and circuits during my <span className="text-text-primary font-semibold">BSc in Electrical and Electronic Engineering (AUST)</span>. However, the logic of software soon pulled me deeper.
               </p>
               
               <p>
-                I transitioned into a <span className="text-white font-semibold">MSc in Computer Science (Brac University)</span> to specialize in what truly excites me: <span className="text-ai-accent font-medium">Artificial Intelligence and Agentic Systems</span>.
+                I transitioned into a <span className="text-text-primary font-semibold">MSc in Computer Science (Brac University)</span> to specialize in what truly excites me: <span className="text-ai-accent font-medium">Artificial Intelligence and Agentic Systems</span>.
               </p>
               
               <p>
-                I thrive at the intersection of robust Full-Stack Engineering and cutting-edge AI. Whether it&apos;s deploying Computer Vision models or architecting blockchain-integrated AI agents, my goal is always the same: <span className="italic text-white">building systems that think.</span>
+                I thrive at the intersection of robust Full-Stack Engineering and cutting-edge AI. Whether it&apos;s deploying Computer Vision models or architecting blockchain-integrated AI agents, my goal is always the same: <span className="italic text-text-primary">building systems that think.</span>
               </p>
 
               <div className="flex flex-col gap-4 mt-8">
@@ -94,7 +94,7 @@ export default function About() {
                     <GraduationCap className="text-fs-accent w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold">MSc in CSE</h4>
+                    <h4 className="text-text-primary font-semibold">MSc in CSE</h4>
                     <p className="text-sm">Brac University | 2025 - Present</p>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export default function About() {
                     <Code2 className="text-ai-accent w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold">BSc in EEE</h4>
+                    <h4 className="text-text-primary font-semibold">BSc in EEE</h4>
                     <p className="text-sm">AUST | 2019 - 2023</p>
                   </div>
                 </div>

@@ -16,7 +16,7 @@ export default function Experience() {
               Experience
             </h2>
             
-            <div className="space-y-12 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[2px] before:bg-white/10">
+            <div className="space-y-12 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[2px] before:bg-text-secondary/20">
               {experiences.map((exp, index) => (
                 <motion.div
                   key={exp.company}
@@ -29,10 +29,10 @@ export default function Experience() {
                   {/* Dot */}
                   <div className={exp.isCurrent ? "absolute left-[9px] top-2 w-4 h-4 rounded-full bg-ai-accent shadow-[0_0_10px_rgba(16,185,129,0.5)]" : "absolute left-[11px] top-2 w-3 h-3 rounded-full bg-slate-700"} />
                   
-                  <div className="glass p-6 rounded-2xl border border-white/5 hover:border-white/10 transition-all group">
+                  <div className="glass p-6 rounded-2xl border border-text-primary/5 hover:border-ai-accent/30 transition-all group">
                     <div className="flex flex-wrap justify-between items-start gap-4 mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-ai-accent transition-colors">{exp.role}</h3>
+                        <h3 className="text-xl font-bold text-text-primary group-hover:text-ai-accent transition-colors">{exp.role}</h3>
                         <div className="flex items-center gap-2 text-fs-accent font-medium mt-1">
                           <Briefcase className="w-4 h-4" />
                           {exp.company}
@@ -79,9 +79,9 @@ export default function Experience() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.2 }}
-                  className="glass p-6 rounded-2xl border border-white/5 bg-linear-to-br from-white/2 to-transparent"
+                  className="glass p-6 rounded-2xl border border-text-primary/5 bg-linear-to-br from-text-primary/5 to-transparent"
                 >
-                  <h3 className="text-lg font-bold text-white mb-1">{edu.degree}</h3>
+                  <h3 className="text-lg font-bold text-text-primary mb-1">{edu.degree}</h3>
                   <p className="text-ai-accent text-sm font-medium mb-3">{edu.institution}</p>
                   <div className="flex items-center gap-2 text-xs text-text-secondary mb-4">
                     <Calendar className="w-3 h-3" />
@@ -98,7 +98,7 @@ export default function Experience() {
 
             {/* Resume Callout */}
             <div className="mt-8 glass-indigo p-6 rounded-2xl border border-fs-accent/20">
-              <h4 className="text-white font-bold mb-2">Detailed Resume</h4>
+              <h4 className="text-text-primary font-bold mb-2">Detailed Resume</h4>
               <p className="text-sm text-text-secondary mb-4">Want a deeper look at my technical expertise and publication history?</p>
               <a 
                 href="/Resume/MohammadWasifAhad_Resume.pdf"

@@ -71,27 +71,27 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-xs text-text-secondary uppercase tracking-widest mb-1">{item.label}</p>
-                      <a href={item.href} className="text-white font-medium hover:text-ai-accent transition-colors">
+                      <a href={item.href} className="text-text-primary font-medium hover:text-ai-accent transition-colors">
                         {item.value}
                       </a>
                     </div>
                   </div>
                   <button 
                     onClick={() => copyToClipboard(item.value)}
-                    className="p-2 text-text-secondary hover:text-white transition-colors"
+                    className="p-2 text-text-secondary hover:text-text-primary transition-colors"
                   >
                     {copied === item.value ? <Check className="w-5 h-5 text-ai-accent" /> : <Copy className="w-5 h-5" />}
                   </button>
                 </div>
               ))}
               
-              <div className="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-dashed border-white/10">
-                <div className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-6 p-6 rounded-2xl glass border border-dashed border-text-primary/10">
+                <div className="w-14 h-14 rounded-xl glass flex items-center justify-center shrink-0">
                   <MapPin className="w-6 h-6 text-text-secondary" />
                 </div>
                 <div>
                   <p className="text-xs text-text-secondary uppercase tracking-widest mb-1">Location</p>
-                  <p className="text-white font-medium">Dhaka, Bangladesh (Onsite / Hybrid / Remote)</p>
+                  <p className="text-text-primary font-medium">Dhaka, Bangladesh (Onsite / Hybrid / Remote)</p>
                 </div>
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function Contact() {
             {/* Background Accent */}
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-ai-accent/10 rounded-full blur-[80px]" />
             
-            <h3 className="text-2xl font-bold text-white mb-8">Send a Quick Message</h3>
+            <h3 className="text-2xl font-bold text-text-primary mb-8">Send a Quick Message</h3>
             
             <div className="space-y-6 relative z-10">
               <div className="space-y-2">
@@ -115,7 +115,7 @@ export default function Contact() {
                 <input 
                   type="email" 
                   placeholder="hello@example.com"
-                  className="w-full bg-slate-950/50 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-ai-accent/50 transition-all"
+                  className="w-full bg-surface border border-text-primary/10 rounded-xl px-5 py-4 focus:outline-none focus:border-ai-accent/50 transition-all text-text-primary placeholder:text-text-secondary/70"
                 />
               </div>
               
@@ -124,7 +124,7 @@ export default function Contact() {
                 <textarea 
                   rows={4}
                   placeholder="How can I help you?"
-                  className="w-full bg-slate-950/50 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-ai-accent/50 transition-all resize-none"
+                  className="w-full bg-surface border border-text-primary/10 rounded-xl px-5 py-4 focus:outline-none focus:border-ai-accent/50 transition-all resize-none text-text-primary placeholder:text-text-secondary/70"
                 ></textarea>
               </div>
 

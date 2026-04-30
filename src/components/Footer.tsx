@@ -25,7 +25,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="py-12 px-6 border-t border-white/5 bg-slate-950/50 backdrop-blur-md">
+    <footer className="py-12 px-6 border-t border-text-primary/5 bg-surface backdrop-blur-md">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           {/* Copyright - Left/Center */}
@@ -33,7 +33,7 @@ export default function Footer() {
             <span className="block text-[10px] text-text-secondary uppercase tracking-[0.3em] mb-1 font-medium">
               All Rights Reserved.
             </span>
-            <p className="text-xl md:text-2xl font-bold text-white tracking-tighter">
+            <p className="text-xl md:text-2xl font-bold text-text-primary tracking-tighter">
               © {currentYear} MOHAMMAD WASIF AHAD
             </p>
           </div>
@@ -43,7 +43,7 @@ export default function Footer() {
             <span className="block text-[10px] text-text-secondary uppercase tracking-[0.3em] mb-1 font-medium">
               Local Time
             </span>
-            <div className="flex items-center justify-center md:justify-end gap-2 text-white font-mono text-sm">
+            <div className="flex items-center justify-center md:justify-end gap-2 text-text-primary font-mono text-sm">
               <span className="text-ai-accent">★</span>
               <span>{mounted ? formatTime(time) : '--:--:--'}</span>
             </div>

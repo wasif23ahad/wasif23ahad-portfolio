@@ -104,7 +104,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 relative overflow-hidden bg-slate-950">
+    <section id="skills" className="py-24 px-6 relative overflow-hidden bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Technologies Header */}
         <div className="text-center mb-16">
@@ -112,7 +112,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold mb-2 text-white"
+            className="text-5xl font-bold mb-2 text-text-primary"
           >
             Technologies
           </motion.h2>
@@ -143,7 +143,7 @@ export default function Skills() {
               transition={{ delay: index * 0.03 }}
               className="flex flex-col items-center gap-3 group w-24 cursor-pointer"
             >
-              <div className="relative w-16 h-16 rounded-full bg-[#0d1117] border border-white/10 flex items-center justify-center p-4 group-hover:border-ai-accent/50 group-hover:bg-[#161b22] transition-all duration-300 shadow-xl overflow-hidden group-hover:shadow-ai-accent/20 group-hover:shadow-2xl">
+              <div className="relative w-16 h-16 rounded-full bg-surface border border-text-primary/10 flex items-center justify-center p-4 group-hover:border-ai-accent/50 transition-all duration-300 shadow-xl overflow-hidden group-hover:shadow-ai-accent/20 group-hover:shadow-2xl">
                 <div 
                   className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300" 
                   style={{ backgroundColor: `#${tech.color}` }}
@@ -156,7 +156,7 @@ export default function Skills() {
                   className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <span className="text-[10px] font-bold tracking-widest text-text-secondary group-hover:text-white transition-colors text-center truncate w-full">
+              <span className="text-[10px] font-bold tracking-widest text-text-secondary group-hover:text-text-primary transition-colors text-center truncate w-full">
                 {tech.name}
               </span>
             </motion.div>
@@ -169,7 +169,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold mb-2 text-white"
+            className="text-5xl font-bold mb-2 text-text-primary"
           >
             Skills
           </motion.h2>
@@ -197,15 +197,15 @@ export default function Skills() {
               }}
               viewport={{ once: true }}
               transition={{ delay: catIndex * 0.2 }}
-              className="glass p-12 py-16 rounded-[2.5rem] border border-white/10 hover:border-white/20 transition-all group min-h-[480px] cursor-default"
+              className="glass p-12 py-16 rounded-[2.5rem] border border-text-primary/10 hover:border-ai-accent/30 transition-all group min-h-[480px] cursor-default"
             >
-              <h3 className="text-2xl font-bold text-center mb-12 text-white group-hover:text-ai-accent transition-colors">
+              <h3 className="text-2xl font-bold text-center mb-12 text-text-primary group-hover:text-ai-accent transition-colors">
                 {category.title}
               </h3>
               <div className="grid grid-cols-2 gap-x-6 gap-y-10">
                 {category.skills.map((skill) => (
                   <div key={skill.name} className="flex items-center gap-4">
-                    <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center p-1.5 shrink-0 overflow-hidden">
+                    <div className="w-8 h-8 rounded-lg glass flex items-center justify-center p-1.5 shrink-0 overflow-hidden">
                       {skill.isCustom ? (
                         <skill.icon />
                       ) : (
@@ -219,7 +219,7 @@ export default function Skills() {
                       )}
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-white leading-tight">{skill.name}</h4>
+                      <h4 className="text-sm font-bold text-text-primary leading-tight">{skill.name}</h4>
                     </div>
                   </div>
                 ))}

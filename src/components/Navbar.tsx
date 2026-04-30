@@ -12,6 +12,7 @@ import {
   ChevronDown,
   LayoutGrid
 } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 const navLinks = [
   { 
@@ -51,9 +52,19 @@ const navLinks = [
   },
 ];
 
+import { ThemeToggle } from './ThemeToggle';
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDark = resolvedTheme === 'dark';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,17 +93,20 @@ export default function Navbar() {
 
   return (
     <nav className="absolute top-6 left-0 right-0 z-50 px-8 pointer-events-none">
-      <div className="max-w-fit mx-auto flex items-start gap-4 pointer-events-auto">
-        {/* Logo - Top Aligned with Navbar */}
+      <div className="max-w-fit mx-auto flex items-center gap-6 md:gap-12 pointer-events-auto">
+        {/* Logo - Aligned with Navbar */}
         <motion.div
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          className="flex items-start"
+          className="flex items-center"
         >
           <img 
             src="/ProfilePicture/PortfolioLogo.png" 
             alt="Logo" 
-            className="w-20 h-20 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-[0_0_10px_rgba(255,255,255,0.05)] mt-[-4px]"
+            className={cn(
+              "w-20 h-20 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer",
+              mounted && !isDark ? "invert" : "invert-0"
+            )}
           />
         </motion.div>
 
@@ -101,7 +115,7 @@ export default function Navbar() {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           className={cn(
-            "flex items-center gap-1 p-1.5 rounded-full border border-white/10 backdrop-blur-2xl bg-slate-950/60 shadow-2xl mt-1"
+            "flex items-center gap-1 p-1.5 rounded-full border border-text-primary/10 backdrop-blur-2xl bg-surface/60 shadow-2xl"
           )}
         >
           {navLinks.map((link) => {
@@ -146,6 +160,15 @@ export default function Navbar() {
             <span className="hidden md:block">More</span>
             <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100" />
           </button>
+        </motion.div>
+
+        {/* Theme Toggle - Spaced further to the right */}
+        <motion.div
+          initial={{ x: 20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          className="pl-8 md:pl-16 border-l border-white/5"
+        >
+          <ThemeToggle />
         </motion.div>
       </div>
     </nav>
