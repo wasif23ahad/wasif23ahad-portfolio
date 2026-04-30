@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { 
   Home, 
@@ -90,22 +90,28 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="absolute top-6 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none">
-      <div className="max-w-fit mx-auto flex items-center gap-3 md:gap-12 pointer-events-auto">
-        {/* Logo - Aligned with Navbar */}
+    <nav className="absolute top-6 left-0 right-0 z-50 px-2 sm:px-4 md:px-8 pointer-events-none">
+      <div className="max-w-fit mx-auto flex items-center gap-2 md:gap-6 lg:gap-12 pointer-events-auto">
+        {/* Logo - Visible on all viewports */}
         <motion.div
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          className="hidden lg:flex items-center"
+          className="flex items-center shrink-0"
         >
-          <img 
-            src="/ProfilePicture/PortfolioLogo.png" 
-            alt="Logo" 
-            className={cn(
-              "w-20 h-20 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer",
-              mounted && !isDark ? "invert" : "invert-0"
-            )}
-          />
+          <button
+            onClick={() => scrollTo('#home')}
+            aria-label="Home"
+            className="focus:outline-none"
+          >
+            <img 
+              src="/ProfilePicture/PortfolioLogo.png" 
+              alt="Logo" 
+              className={cn(
+                "w-10 h-10 sm:w-12 sm:h-12 lg:w-20 lg:h-20 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer",
+                mounted && !isDark ? "invert" : "invert-0"
+              )}
+            />
+          </button>
         </motion.div>
 
         {/* Centered Pill Navigation */}
@@ -118,46 +124,13 @@ export default function Navbar() {
         >
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
-            if (link.name === 'Qualification' || link.name === 'Tech Stack') {
-              return (
-                <button
-                  key={link.name}
-                  onClick={() => scrollTo(link.href)}
-                  aria-label={`Navigate to ${link.name}`}
-                  className={cn(
-                    "relative hidden sm:flex items-center gap-2 px-3 md:px-4 py-3 md:py-2 rounded-full text-sm font-bold transition-all duration-300",
-                    isActive 
-                      ? "text-white" 
-                      : "text-text-secondary hover:text-white"
-                  )}
-                >
-                  {isActive && (
-                    <motion.div
-                      layoutId="active-pill"
-                      className="absolute inset-0 bg-white/10 rounded-full shadow-inner"
-                      transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                    />
-                  )}
-                  <div className={cn(
-                    "p-1.5 rounded-full transition-all",
-                    isActive ? link.bg : "bg-transparent group-hover:bg-white/5"
-                  )}>
-                    <link.icon className={cn(
-                      "w-4 h-4 transition-colors",
-                      isActive ? link.color : "text-text-secondary"
-                    )} />
-                  </div>
-                  <span className="relative z-10 hidden md:block">{link.name}</span>
-                </button>
-              );
-            }
             return (
               <button
                 key={link.name}
                 onClick={() => scrollTo(link.href)}
                 aria-label={`Navigate to ${link.name}`}
                 className={cn(
-                  "relative flex items-center gap-2 px-3 md:px-4 py-3 md:py-2 rounded-full text-sm font-bold transition-all duration-300",
+                  "relative flex items-center gap-1.5 md:gap-2 px-2 sm:px-3 md:px-4 py-2 md:py-2 rounded-full text-sm font-bold transition-all duration-300 min-w-[44px] min-h-[44px] justify-center",
                   isActive 
                     ? "text-white" 
                     : "text-text-secondary hover:text-white"
@@ -171,7 +144,7 @@ export default function Navbar() {
                   />
                 )}
                 <div className={cn(
-                  "p-1.5 rounded-full transition-all",
+                  "p-1 sm:p-1.5 rounded-full transition-all",
                   isActive ? link.bg : "bg-transparent group-hover:bg-white/5"
                 )}>
                   <link.icon className={cn(
@@ -179,12 +152,7 @@ export default function Navbar() {
                     isActive ? link.color : "text-text-secondary"
                   )} />
                 </div>
-                <span className={cn(
-                  "relative z-10 hidden",
-                  link.name === 'Qualification' || link.name === 'Tech Stack' ? "md:block" : "md:block" 
-                )}>
-                  {link.name}
-                </span>
+                <span className="relative z-10 hidden md:block">{link.name}</span>
               </button>
             );
           })}
@@ -195,7 +163,7 @@ export default function Navbar() {
         <motion.div
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          className="pl-3 md:pl-16 border-l border-white/5"
+          className="pl-1 sm:pl-3 md:pl-16 border-l border-white/5"
         >
           <ThemeToggle />
         </motion.div>

@@ -47,6 +47,54 @@ body {
   overflow-x: hidden;
 }
 
+/* ─── Global Cursor & Selection Control ─────────────────────────────── */
+
+/* Default cursor everywhere — kill the I-beam on all text */
+*,
+*::before,
+*::after {
+  cursor: default;
+}
+
+/* Disable text selection site-wide — no drag-highlight on any content */
+html,
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, div, li, ul, ol,
+nav, header, footer, section, article,
+button, a, label {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Restore I-beam + selection ONLY inside actual form input fields */
+input,
+textarea,
+[contenteditable="true"] {
+  cursor: text !important;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+/* Pointer cursor for interactive elements */
+button,
+a,
+[role="button"],
+[role="link"],
+label[for],
+summary,
+select,
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Disabled state */
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed !important;
+}
+
 .glass-emerald {
   background: rgba(16, 185, 129, 0.05);
   backdrop-filter: blur(12px);
