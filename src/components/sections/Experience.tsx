@@ -100,9 +100,13 @@ export default function Experience() {
             <div className="mt-8 glass-indigo p-6 rounded-2xl border border-fs-accent/20">
               <h4 className="text-white font-bold mb-2">Detailed Resume</h4>
               <p className="text-sm text-text-secondary mb-4">Want a deeper look at my technical expertise and publication history?</p>
-              <button className="w-full py-3 bg-fs-accent text-white rounded-xl font-bold hover:scale-105 active:scale-95 transition-all">
+              <a 
+                href="/Resume/MohammadWasifAhad_Resume.pdf"
+                download="MohammadWasifAhad_Resume.pdf"
+                className="w-full py-3 bg-fs-accent text-white rounded-xl font-bold hover:scale-105 active:scale-95 transition-all block text-center"
+              >
                 Download PDF
-              </button>
+              </a>
             </div>
           </div>
         </div>

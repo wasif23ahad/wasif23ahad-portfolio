@@ -31,7 +31,7 @@ export default function About() {
                 <div className="relative w-32 h-32 rounded-full border-2 border-ai-accent/30 p-1 group">
                   <div className="w-full h-full rounded-full bg-slate-900 border border-white/10 flex items-center justify-center overflow-hidden">
                     <img 
-                      src="/ProfilePicture/Dp.jpeg" 
+                      src="/ProfilePicture/DP.jpeg" 
                       alt="Wasif Ahad Casual" 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />

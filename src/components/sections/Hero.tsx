@@ -76,16 +76,18 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-wrap gap-4 mb-10">
-            <motion.button
+            <motion.a
+              href="/Resume/MohammadWasifAhad_Resume.pdf"
+              download="MohammadWasifAhad_Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative px-8 py-4 bg-ai-accent text-slate-950 font-bold rounded-xl overflow-hidden shadow-[0_0_30px_rgba(16,185,129,0.3)]"
+              className="group relative px-8 py-4 bg-ai-accent text-slate-950 font-bold rounded-xl overflow-hidden shadow-[0_0_30px_rgba(16,185,129,0.3)] block"
             >
-              <div className="flex items-center gap-2 relative z-10">
+              <div className="flex items-center gap-2 relative z-10 justify-center">
                 <span>Download Resume</span>
                 <Download className="w-5 h-5 transition-transform group-hover:translate-y-1" />
               </div>
-            </motion.button>
+            </motion.a>
             
             <motion.button
               whileHover={{ scale: 1.05 }}
