@@ -93,12 +93,12 @@ export default function Navbar() {
 
   return (
     <nav className="absolute top-6 left-0 right-0 z-50 px-4 md:px-8 pointer-events-none">
-      <div className="max-w-fit mx-auto flex items-center gap-6 md:gap-12 pointer-events-auto">
+      <div className="max-w-fit mx-auto flex items-center gap-3 md:gap-12 pointer-events-auto">
         {/* Logo - Aligned with Navbar */}
         <motion.div
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          className="flex items-center"
+          className="hidden lg:flex items-center"
         >
           <img 
             src="/ProfilePicture/PortfolioLogo.png" 
@@ -120,6 +120,39 @@ export default function Navbar() {
         >
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
+            if (link.name === 'Qualification' || link.name === 'Tech Stack') {
+              return (
+                <button
+                  key={link.name}
+                  onClick={() => scrollTo(link.href)}
+                  aria-label={`Navigate to ${link.name}`}
+                  className={cn(
+                    "relative hidden sm:flex items-center gap-2 px-3 md:px-4 py-3 md:py-2 rounded-full text-sm font-bold transition-all duration-300",
+                    isActive 
+                      ? "text-white" 
+                      : "text-text-secondary hover:text-white"
+                  )}
+                >
+                  {isActive && (
+                    <motion.div
+                      layoutId="active-pill"
+                      className="absolute inset-0 bg-white/10 rounded-full shadow-inner"
+                      transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+                    />
+                  )}
+                  <div className={cn(
+                    "p-1.5 rounded-full transition-all",
+                    isActive ? link.bg : "bg-transparent group-hover:bg-white/5"
+                  )}>
+                    <link.icon className={cn(
+                      "w-4 h-4 transition-colors",
+                      isActive ? link.color : "text-text-secondary"
+                    )} />
+                  </div>
+                  <span className="relative z-10 hidden md:block">{link.name}</span>
+                </button>
+              );
+            }
             return (
               <button
                 key={link.name}
@@ -148,7 +181,12 @@ export default function Navbar() {
                     isActive ? link.color : "text-text-secondary"
                   )} />
                 </div>
-                <span className="relative z-10 hidden md:block">{link.name}</span>
+                <span className={cn(
+                  "relative z-10 hidden",
+                  link.name === 'Qualification' || link.name === 'Tech Stack' ? "md:block" : "md:block" 
+                )}>
+                  {link.name}
+                </span>
               </button>
             );
           })}
@@ -170,7 +208,7 @@ export default function Navbar() {
         <motion.div
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          className="pl-8 md:pl-16 border-l border-white/5"
+          className="pl-3 md:pl-16 border-l border-white/5"
         >
           <ThemeToggle />
         </motion.div>
