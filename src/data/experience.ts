@@ -11,7 +11,7 @@ export const experiences: Experience[] = [
   {
     company: "QzenTech",
     role: "Software Engineer - AI & Agentic Systems",
-    duration: "2024 - Present",
+    duration: "July 2024 - Present",
     location: "Remote/Dhaka",
     isCurrent: true,
     description: [
@@ -24,7 +24,7 @@ export const experiences: Experience[] = [
   {
     company: "Bondstein Technologies",
     role: "Jr. ML Engineer",
-    duration: "2023 - 2024",
+    duration: "April 2024 - November 2024",
     location: "Dhaka, Bangladesh",
     description: [
       "Developed and deployed computer vision models using YOLO for real-time object detection.",
@@ -46,13 +46,13 @@ export const education: Education[] = [
   {
     degree: "MSc in Computer Science and Engineering",
     institution: "Brac University",
-    duration: "2024 - Present",
+    duration: "2025 - Present",
     description: "Focusing on Artificial Intelligence, Machine Learning, and Advanced Algorithms."
   },
   {
     degree: "BSc in Electrical and Electronic Engineering",
     institution: "Ahsanullah University of Science and Technology (AUST)",
-    duration: "2018 - 2022",
-    description: "Graduated with honors. Specialized in signal processing and embedded systems."
+    duration: "2019 - 2023",
+    description: "Graduated in 2023. Specialized in Electronics and embedded systems."
   }
 ];

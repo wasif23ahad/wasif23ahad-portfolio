@@ -1,6 +1,6 @@
 'use client';
 
-import { Terminal, Github, Linkedin, Twitter, Globe, Link as LinkIcon, Code } from 'lucide-react';
+import { Terminal, Globe, Link as LinkIcon, Code } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,10 +29,10 @@ export default function Footer() {
             <a href="https://github.com/wasif23ahad" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-white/5 text-text-secondary hover:text-ai-accent hover:bg-white/10 transition-all">
               <Code className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com/in/wasif23ahad" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-white/5 text-text-secondary hover:text-ai-accent hover:bg-white/10 transition-all">
+            <a href="https://www.linkedin.com/in/wasifahad/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-white/5 text-text-secondary hover:text-ai-accent hover:bg-white/10 transition-all">
               <LinkIcon className="w-5 h-5" />
             </a>
-            <a href="https://twitter.com/wasif23ahad" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-white/5 text-text-secondary hover:text-ai-accent hover:bg-white/10 transition-all">
+            <a href="https://x.com/WasifAhad1" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-white/5 text-text-secondary hover:text-ai-accent hover:bg-white/10 transition-all">
               <Globe className="w-5 h-5" />
             </a>
           </div>

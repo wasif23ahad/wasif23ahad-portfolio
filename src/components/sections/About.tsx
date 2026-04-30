@@ -28,9 +28,16 @@ export default function About() {
                 <div className="w-16 h-16 rounded-2xl bg-ai-accent/20 flex items-center justify-center">
                   <Cpu className="text-ai-accent w-8 h-8" />
                 </div>
-                <div className="text-right">
-                  <span className="block text-4xl font-bold text-white">MSc.</span>
-                  <span className="text-ai-accent font-mono">CSE Candidate</span>
+                <div className="relative w-32 h-32 rounded-full border-2 border-ai-accent/30 p-1 group">
+                  <div className="w-full h-full rounded-full bg-slate-900 border border-white/10 flex items-center justify-center overflow-hidden">
+                    <img 
+                      src="/ProfilePicture/Dp.jpeg" 
+                      alt="Wasif Ahad Casual" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  {/* Decorative Ring */}
+                  <div className="absolute -inset-2 border border-ai-accent/10 rounded-full animate-spin-slow" />
                 </div>
               </div>
               
@@ -54,15 +61,6 @@ export default function About() {
               </div>
             </div>
             
-            {/* Floating Element */}
-            <motion.div
-              animate={{ y: [0, -20, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-8 -right-8 glass p-6 rounded-2xl border border-fs-accent/30 hidden md:block max-w-[200px]"
-            >
-              <Laptop className="text-fs-accent mb-2" />
-              <p className="text-sm font-medium italic">&quot;Vibe Coding is not just a trend, it&apos;s a lifestyle.&quot;</p>
-            </motion.div>
           </motion.div>
 
           {/* Text Side */}
@@ -87,7 +85,7 @@ export default function About() {
               </p>
               
               <p>
-                I thrive at the intersection of robust Full-Stack Engineering and cutting-edge AI. Whether it&apos;s deploying Computer Vision models at Bondstein or architecting blockchain-integrated AI agents at QzenTech, my goal is always the same: <span className="italic text-white">building systems that think.</span>
+                I thrive at the intersection of robust Full-Stack Engineering and cutting-edge AI. Whether it&apos;s deploying Computer Vision models or architecting blockchain-integrated AI agents, my goal is always the same: <span className="italic text-white">building systems that think.</span>
               </p>
 
               <div className="flex flex-col gap-4 mt-8">
@@ -97,7 +95,7 @@ export default function About() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">MSc in CSE</h4>
-                    <p className="text-sm">Brac University | 2024 - Present</p>
+                    <p className="text-sm">Brac University | 2025 - Present</p>
                   </div>
                 </div>
                 
@@ -107,7 +105,7 @@ export default function About() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">BSc in EEE</h4>
-                    <p className="text-sm">AUST | 2018 - 2022</p>
+                    <p className="text-sm">AUST | 2019 - 2023</p>
                   </div>
                 </div>
               </div>

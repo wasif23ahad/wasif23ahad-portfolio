@@ -91,7 +91,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-text-secondary uppercase tracking-widest mb-1">Location</p>
-                  <p className="text-white font-medium">Dhaka, Bangladesh (Open to Remote)</p>
+                  <p className="text-white font-medium">Dhaka, Bangladesh (Onsite / Hybrid / Remote)</p>
                 </div>
               </div>
             </div>
