@@ -71,7 +71,8 @@ export default function Hero() {
           </h1>
           
           <p className="text-xl text-text-secondary mb-8 max-w-xl leading-relaxed">
-            Full-Stack Developer | AI Engineer | Agentic Workflow Architect. 
+            Full-Stack Developer | AI Engineer | Agentic Workflow Architect. </p>
+            <p className="text-xl text-text-secondary mb-8 max-w-xl leading-relaxed">
             Crafting intelligent digital ecosystems where engineering meets artificial intelligence.
           </p>
           

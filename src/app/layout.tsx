@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mohammad Wasif Ahad | Full-Stack & AI Engineer",
   description: "Portfolio of Mohammad Wasif Ahad - Full-Stack Developer, AI Engineer, and Agentic Workflow Architect specializing in immersive digital ecosystems.",
+  icons: {
+    icon: "/Projects/FavIcon.ico",
+  },
 };
 
 export default function RootLayout({

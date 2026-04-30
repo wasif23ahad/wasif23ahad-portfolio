@@ -131,23 +131,5 @@ export const projects: Project[] = [
       "Real-time vehicle availability syncing via WebSockets.",
       "Map-based vehicle discovery using PostGIS geospatial queries."
     ]
-  },
-  {
-    id: "llm-validator",
-    title: "Agentic LLM Validator Pipeline",
-    description: "Multi-agent system that validates and benchmarks LLM outputs against business and safety constraints using a reflective architecture.",
-    longDescription: "A sophisticated pipeline designed to automate the evaluation of LLM responses. It uses a 'Judge' agent to score outputs on factual accuracy, tone, and safety, a 'Reflector' agent to suggest improvements, and a 'Finalizer' to produce the best version. Includes a benchmarking suite to compare different models (GPT-4, Claude, Llama-3) against custom test sets.",
-    image: "/Projects/llm-validator.png",
-    techStack: ["Python", "LangChain", "OpenAI", "FAISS", "FastAPI"],
-    challenges: [
-      "Designing a robust multi-agent orchestration logic that avoids infinite reflection loops.",
-      "Normalizing scoring metrics across different foundation models to ensure fair benchmarking.",
-      "Optimizing token usage for long-form reflective evaluation chains."
-    ],
-    futurePlans: [
-      "Integration with real-time monitoring tools like LangSmith for production observability.",
-      "Support for multi-modal evaluation (image-to-text validation).",
-      "Automated fine-tuning dataset generation from high-scoring reflective outputs."
-    ]
   }
 ];

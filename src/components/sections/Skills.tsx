@@ -12,14 +12,14 @@ const technologies = [
   { name: 'PostgreSQL', slug: 'postgresql', color: '4169E1' },
   
   // Frameworks & Libraries
-  { name: 'Next.js', slug: 'nextdotjs', color: 'FFFFFF' },
+  { name: 'Next.js', slug: 'nextdotjs', color: '000000' },
   { name: 'React', slug: 'react', color: '61DAFB' },
   { name: 'Node.js', slug: 'nodedotjs', color: '339933' },
-  { name: 'Express', slug: 'express', color: 'FFFFFF' },
+  { name: 'Express', slug: 'express', color: '000000' },
   { name: 'NestJS', slug: 'nestjs', color: 'E0234E' },
   { name: 'FastAPI', slug: 'fastapi', color: '05998B' },
   { name: 'Django', slug: 'django', color: '092E20' },
-  { name: 'Flask', slug: 'flask', color: 'FFFFFF' },
+  { name: 'Flask', slug: 'flask', color: '000000' },
   
   // Databases & ORMs
   { name: 'MongoDB', slug: 'mongodb', color: '47A248' },
@@ -67,7 +67,7 @@ const skillCategories = [
     title: 'Frontend Developer',
     skills: [
       { name: 'HTML5', slug: 'html5', color: 'E34F26' },
-      { name: 'Next.js', slug: 'nextdotjs', color: 'FFFFFF' },
+      { name: 'Next.js', slug: 'nextdotjs', color: '000000' },
       { name: 'TypeScript', slug: 'typescript', color: '3178C6' },
       { name: 'Tailwind CSS', slug: 'tailwindcss', color: '06B6D4' },
       { name: 'JavaScript', slug: 'javascript', color: 'F7DF1E' },
@@ -79,7 +79,7 @@ const skillCategories = [
     skills: [
       { name: 'Node.js', slug: 'nodedotjs', color: '339933' },
       { name: 'Go', slug: 'go', color: '00ADD8' },
-      { name: 'Express.js', slug: 'express', color: 'FFFFFF' },
+      { name: 'Express.js', slug: 'express', color: '000000' },
       { name: 'FastAPI', slug: 'fastapi', color: '05998B' },
       { name: 'Docker', slug: 'docker', color: '2496ED' },
       { name: 'Kubernetes', slug: 'kubernetes', color: '326CE5' },
@@ -91,7 +91,7 @@ const skillCategories = [
     title: 'AI Engineer',
     skills: [
       { name: 'Python', slug: 'python', color: '3776AB' },
-      { name: 'LangChain', slug: 'langchain', color: 'FFFFFF' },
+      { name: 'LangChain', slug: 'langchain', color: '1C3C3C' },
       { name: 'Agentic Flow', isCustom: true, icon: AgenticIcon }, 
       { name: 'RAG Pipelines', isCustom: true, icon: RagIcon }, 
       { name: 'Docker', slug: 'docker', color: '2496ED' },
@@ -143,7 +143,7 @@ export default function Skills() {
               transition={{ delay: index * 0.03 }}
               className="flex flex-col items-center gap-3 group w-24 cursor-pointer"
             >
-              <div className="relative w-16 h-16 rounded-full bg-surface border border-text-primary/10 flex items-center justify-center p-4 group-hover:border-ai-accent/50 transition-all duration-300 shadow-xl overflow-hidden group-hover:shadow-ai-accent/20 group-hover:shadow-2xl">
+              <div className="relative w-16 h-16 rounded-full bg-white border border-text-primary/10 flex items-center justify-center p-4 group-hover:border-ai-accent/50 transition-all duration-300 shadow-xl overflow-hidden group-hover:shadow-ai-accent/20 group-hover:shadow-2xl">
                 <div 
                   className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300" 
                   style={{ backgroundColor: `#${tech.color}` }}
@@ -153,11 +153,7 @@ export default function Skills() {
                     ? `https://skillicons.dev/icons?i=aws` 
                     : `https://cdn.simpleicons.org/${tech.slug}/${tech.color}`} 
                   alt={tech.name}
-                  className={cn(
-                    "w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300",
-                    tech.color === 'FFFFFF' && "dark:invert-0 invert",
-                    (tech.slug === 'django' || tech.slug === 'prisma') && "dark:invert invert-0"
-                  )}
+                  className="w-full h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <span className="text-[10px] font-bold tracking-widest text-text-secondary group-hover:text-text-primary transition-colors text-center truncate w-full">
@@ -209,7 +205,7 @@ export default function Skills() {
               <div className="grid grid-cols-2 gap-x-6 gap-y-10">
                 {category.skills.map((skill) => (
                   <div key={skill.name} className="flex items-center gap-4">
-                    <div className="w-8 h-8 rounded-lg glass flex items-center justify-center p-1.5 shrink-0 overflow-hidden">
+                    <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center p-1.5 shrink-0 overflow-hidden shadow-sm">
                       {skill.isCustom ? (
                         <skill.icon />
                       ) : (
@@ -218,11 +214,7 @@ export default function Skills() {
                             ? `https://skillicons.dev/icons?i=aws` 
                             : `https://cdn.simpleicons.org/${skill.slug}/${skill.color}`} 
                           alt={skill.name}
-                          className={cn(
-                            "w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity",
-                            skill.color === 'FFFFFF' && "dark:invert-0 invert",
-                            (skill.slug === 'django' || skill.slug === 'prisma') && "dark:invert invert-0"
-                          )}
+                          className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                         />
                       )}
                     </div>

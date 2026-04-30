@@ -8,9 +8,7 @@ import {
   Cpu, 
   GraduationCap, 
   Layout, 
-  Send, 
-  ChevronDown,
-  LayoutGrid
+  Send 
 } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
@@ -190,18 +188,7 @@ export default function Navbar() {
               </button>
             );
           })}
-          
-          {/* More Dropdown */}
-          <button 
-            aria-label="View more sections"
-            className="flex items-center gap-2 px-3 md:px-4 py-3 md:py-2 rounded-full text-sm font-bold text-text-secondary hover:text-white transition-all group"
-          >
-            <div className="p-1.5 rounded-full bg-transparent group-hover:bg-purple-500/10">
-              <LayoutGrid className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
-            </div>
-            <span className="hidden md:block">More</span>
-            <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100" />
-          </button>
+
         </motion.div>
 
         {/* Theme Toggle - Spaced further to the right */}
