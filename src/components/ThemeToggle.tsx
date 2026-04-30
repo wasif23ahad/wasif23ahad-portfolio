@@ -16,7 +16,11 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="w-20 h-10 rounded-full glass border border-white/10" />
+      <button
+        className="relative w-20 h-10 rounded-full glass border border-white/10 p-1.5 opacity-0"
+        aria-label="Toggle theme"
+        disabled
+      />
     );
   }
 

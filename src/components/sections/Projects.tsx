@@ -57,6 +57,7 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -136,6 +137,7 @@ export default function Projects() {
                       src={selectedProject.image}
                       alt={selectedProject.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 768px"
                       className="object-cover transition-opacity duration-500"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;

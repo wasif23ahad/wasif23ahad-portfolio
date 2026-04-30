@@ -136,6 +136,7 @@ export default function Hero() {
                 src="/ProfilePicture/WasifDp.png"
                 alt="Mohammad Wasif Ahad"
                 fill
+                sizes="(max-width: 768px) 192px, 320px"
                 className="object-cover"
                 priority
                 onError={(e) => {
