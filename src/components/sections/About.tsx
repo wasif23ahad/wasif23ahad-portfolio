@@ -23,7 +23,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-square glass rounded-3xl overflow-hidden p-8 border border-white/10 flex flex-col justify-between">
+            <div className="lg:aspect-square glass rounded-3xl overflow-hidden p-5 md:p-8 border border-white/10 flex flex-col justify-between gap-6">
               <div className="flex justify-between items-start">
                 <div className="w-16 h-16 rounded-2xl bg-ai-accent/20 flex items-center justify-center">
                   <Cpu className="text-ai-accent w-8 h-8" />
