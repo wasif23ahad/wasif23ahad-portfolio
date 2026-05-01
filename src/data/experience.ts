@@ -11,7 +11,7 @@ export const experiences: Experience[] = [
   {
     company: "QzenTech",
     role: "Software Engineer — AI & Agentic Systems",
-    duration: "Jul 2025 – Apr 2026",
+    duration: "Jul 2025 – Present",
     location: "Remote/Dhaka",
     description: [
       "Designed modular pipelines handling 50K+ ETH2/PoS validator data points, integrating trust scoring and reinforcement learning for validator selection, and supported reproducible workflows for blockchain ML research.",
